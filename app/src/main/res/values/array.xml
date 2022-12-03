@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="habitaciones">
+        <item>Escoja una opcion</item>
+        <item>Habitacion Individual</item>
+        <item>Habitacion Deluxe</item>
+        <item>Habitacion Matrimonial</item>
+        <item>Habitacion Familiar</item>
+    </string-array>
+
+    <string-array name="actividades">
+        <item>Escoja una opcion</item>
+        <item>Paseo a caballo - 5$</item>
+        <item>Caminata guiada en la montaña - 5$</item>
+        <item>Cannopy - 15$</item>
+        <item>Ninguna</item>
+    </string-array>
+</resources>
