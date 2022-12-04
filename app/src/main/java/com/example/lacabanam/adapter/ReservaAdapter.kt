@@ -27,7 +27,7 @@ class ReservaAdapter : RecyclerView.Adapter <ReservaAdapter.ReservaViewHolder>()
 
             itemBinding.vistaFila.setOnClickListener {
                 val accion = HomeFragmentDirections
-                    .actionHomeFragmentToCrearReserva()
+                    .actionHomeFragmentToActualizaReserva(reserva)
                 itemView.findNavController().navigate(accion)
             }
 

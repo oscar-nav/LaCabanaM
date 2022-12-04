@@ -24,9 +24,12 @@
 
     <string name="txt_dias">Fechas</string>
     <string name="txt_actividades">Actividades</string>
-    <string name="txt_cantidad">Cantidad de personas</string>A
+    <string name="txt_cantidad">Cantidad de personas</string>
     <string name="txt_telefono">Telefono registrado</string>
 
-
+    <!-- Strings de la parte de actualizar reservas || Los textboxes-->
+    <string name="msg_data">procesando</string>
+    <string name="msg_reserva_actualizada">Reserva actualizada</string>
+    <string name="msg_reserva_eliminada">Reserva eliminada</string>
 
 </resources>
