@@ -19,6 +19,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_principal">Principal</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Reservas</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
 
     <!-- Strings de la parte de mostrar reservas || Los textboxes-->
 
@@ -31,5 +35,7 @@
     <string name="msg_data">procesando</string>
     <string name="msg_reserva_actualizada">Reserva actualizada</string>
     <string name="msg_reserva_eliminada">Reserva eliminada</string>
-
+    <string name="nav_header_desc">Reservas</string>
+    <string name="nav_header_title">La Cabana</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
 </resources>
