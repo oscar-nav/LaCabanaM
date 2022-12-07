@@ -38,4 +38,7 @@
     <string name="nav_header_desc">Reservas</string>
     <string name="nav_header_title">La Cabana</string>
     <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="title_activity_principal2">Principal2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

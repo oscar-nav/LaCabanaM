@@ -2,10 +2,25 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/nav_gallery"
+        android:name="com.example.lacabanam.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.lacabanam.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+
+    <fragment
+        android:id="@+id/nav_home"
         android:name="com.example.lacabanam.ui.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
@@ -23,7 +38,7 @@
         tools:layout="@layout/fragment_crear_reserva" >
         <action
             android:id="@+id/action_crearReserva_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/nav_home" />
     </fragment>
     <fragment
         android:id="@+id/actualizaReserva"
@@ -32,9 +47,10 @@
         tools:layout="@layout/fragment_actualiza_reserva" >
         <action
             android:id="@+id/action_actualizaReserva_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/nav_home" />
         <argument
             android:name="reserva"
             app:argType="com.example.lacabanam.model.Reserva" />
     </fragment>
+
 </navigation>

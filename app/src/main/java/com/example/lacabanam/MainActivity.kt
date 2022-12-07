@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun refresca(user: FirebaseUser?) {
         if (user != null) {  //Si hay un usuario entonce paso al pantalla principal
-            val intent = Intent(this, Principal::class.java)
+            val intent = Intent(this, Principal2::class.java)
             startActivity(intent)
         }
     }

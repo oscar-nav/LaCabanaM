@@ -4,50 +4,38 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.Fragment
+import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.lacabanam.databinding.ActivityPrincipalBinding
-import com.example.lacabanam.ui.home.HomeFragment
-import com.google.firebase.auth.ktx.auth
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import androidx.navigation.ui.NavigationUI
-import androidx.navigation.fragment.NavHostFragment
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.app.AppCompatActivity
+import com.example.lacabanam.databinding.ActivityPrincipal2Binding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-
-class Principal : AppCompatActivity() {
-
+class Principal2 : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityPrincipalBinding
+    private lateinit var binding: ActivityPrincipal2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityPrincipalBinding.inflate(layoutInflater)
+        binding = ActivityPrincipal2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.appBarPrincipal.toolbar)
-3
+        setSupportActionBar(binding.appBarPrincipal2.toolbar)
+
+//        binding.appBarPrincipal2.fa.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show()
+//        }
         val drawerLayout: DrawerLayout = binding.drawerLayout
-
         val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_content_principal)
-
-        //val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_principal) as NavHostFragment
-        //val navController = navHostFragment.navController
-
+        val navController = findNavController(R.id.nav_host_fragment_content_principal2)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
@@ -61,14 +49,21 @@ class Principal : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.principal, menu)
+        menuInflater.inflate(R.menu.principal2, menu)
         return true
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_principal)
+        val navController = findNavController(R.id.nav_host_fragment_content_principal2)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_logoff -> {
+                Firebase.auth.signOut()
+                finish()
+                true
+            } else -> super.onOptionsItemSelected(item)
+        }
+    }
 }
