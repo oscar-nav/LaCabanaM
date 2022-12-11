@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.lacabanam.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="Inicio"
         tools:layout="@layout/fragment_gallery" />
 
 
@@ -22,8 +22,8 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.lacabanam.ui.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Mis reservas"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_crearReserva"
             app:destination="@id/crearReserva" />
@@ -34,8 +34,8 @@
     <fragment
         android:id="@+id/crearReserva"
         android:name="com.example.lacabanam.ui.home.crearReserva"
-        android:label="fragment_crear_reserva"
-        tools:layout="@layout/fragment_crear_reserva" >
+        android:label="Crear Reserva"
+        tools:layout="@layout/fragment_crear_reserva">
         <action
             android:id="@+id/action_crearReserva_to_homeFragment"
             app:destination="@id/nav_home" />
@@ -43,8 +43,8 @@
     <fragment
         android:id="@+id/actualizaReserva"
         android:name="com.example.lacabanam.ui.home.actualizaReserva"
-        android:label="fragment_actualiza_reserva"
-        tools:layout="@layout/fragment_actualiza_reserva" >
+        android:label="Actualizar Reserva"
+        tools:layout="@layout/fragment_actualiza_reserva">
         <action
             android:id="@+id/action_actualizaReserva_to_homeFragment"
             app:destination="@id/nav_home" />

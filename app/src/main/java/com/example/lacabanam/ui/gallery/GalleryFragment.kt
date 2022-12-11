@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.lacabanam.R
 import com.example.lacabanam.databinding.FragmentGalleryBinding
 
 class GalleryFragment : Fragment() {
@@ -28,10 +30,14 @@ class GalleryFragment : Fragment() {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        binding.btnReservar.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_crearReserva)
         }
+
+        binding.btnReservar2.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_crearReserva)
+        }
+
         return root
     }
 
